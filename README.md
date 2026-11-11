@@ -9,6 +9,8 @@ Dependency-free Java 21 server. Build with JDK 21:
 
 GitHub Actions builds the JAR on pushes to main. Download it from Actions > Build executable JAR > Artifacts.
 
+Configuration is loaded from `.env` in the current working directory. Existing operating-system environment variables take priority over `.env`. Copy `.env.example` to `.env` and fill in your values. The `.env` file is ignored by Git.
+
 Run on Linux:
 
     export HOST=127.0.0.1 PORT=8080
