@@ -9,11 +9,11 @@ Dependency-free Java 21 server. Build with JDK 21:
 
 GitHub Actions builds the JAR on pushes to main. Download it from Actions > Build executable JAR > Artifacts.
 
-Configuration is loaded from `.env` in the current working directory. Existing operating-system environment variables take priority over `.env`. Copy `.env.example` to `.env` and fill in your values. The `.env` file is ignored by Git.
+Configuration is loaded from `.env` in the current working directory. Existing operating-system environment variables take priority over `.env`. Copy `.env.example` to `.env` and fill in your values. The `.env` file is ignored by Git. The default `HOST` is `0.0.0.0`, so the server listens on all network interfaces. Set it to `127.0.0.1` if it should only accept local connections.
 
 Run on Linux:
 
-    export HOST=127.0.0.1 PORT=8080
+    export HOST=0.0.0.0 PORT=8080
     export TELEGRAM_BOT_TOKEN='your-token'
     export TELEGRAM_WEBHOOK_SECRET='random-secret'
     java --add-modules jdk.httpserver -jar anipixel-java.jar
